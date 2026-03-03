@@ -1,0 +1,132 @@
+[gd_scene format=3 uid="uid://4pqund3nukl7"]
+
+[ext_resource type="Script" uid="uid://dt3nc4our1mgp" path="res://node_2d.gd" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://bitowfuidgdwd" path="res://froglel hintergrund/frogle_hud_1_png_du_bastard_hihi.png" id="2_epypp"]
+
+[node name="Node2D" type="Node2D" unique_id=319475923]
+script = ExtResource("1_0e48y")
+
+[node name="hintergrund" type="Sprite2D" parent="." unique_id=1131095307]
+position = Vector2(180, 320)
+scale = Vector2(5, 5)
+texture = ExtResource("2_epypp")
+
+[node name="W 1-3" type="HBoxContainer" parent="." unique_id=534300948]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 488.0
+offset_right = 196.0
+offset_bottom = 542.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="W1" type="Button" parent="W 1-3" unique_id=2590803]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "W1
+"
+
+[node name="W2" type="Button" parent="W 1-3" unique_id=29485722]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "W2"
+
+[node name="W3" type="Button" parent="W 1-3" unique_id=1595348066]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "W3"
+
+[node name="W 4-6" type="HBoxContainer" parent="." unique_id=1301497902]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 22.0
+offset_top = 565.0
+offset_right = 198.0
+offset_bottom = 624.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="W4" type="Button" parent="W 4-6" unique_id=1916391075]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "W4"
+
+[node name="W5" type="Button" parent="W 4-6" unique_id=520146225]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "W5"
+
+[node name="W6" type="Button" parent="W 4-6" unique_id=1004579971]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "W6"
+
+[node name="Fold" type="Button" parent="." unique_id=1588467566]
+offset_left = 206.0
+offset_top = 564.0
+offset_right = 336.0
+offset_bottom = 627.0
+text = "FOLD"
+
+[node name="Throw" type="Button" parent="." unique_id=41961671]
+offset_left = 208.0
+offset_top = 485.0
+offset_right = 336.0
+offset_bottom = 550.0
+text = "Throw dice"
+
+[node name="Score Player" type="Label" parent="." unique_id=225311058]
+modulate = Color(0.8047434, 0.07420995, 1.92523e-07, 1)
+self_modulate = Color(0.7431366, 0.06864572, 2.8878452e-07, 1)
+offset_left = 26.0
+offset_top = 75.0
+offset_right = 175.0
+offset_bottom = 136.0
+text = "player score label"
+
+[node name="Score Cpu" type="Label" parent="." unique_id=1568945760]
+self_modulate = Color(0.8912906, 4.1873755e-06, 8.663535e-07, 1)
+offset_left = 177.0
+offset_top = 75.0
+offset_right = 335.0
+offset_bottom = 138.0
+text = "Cpu score label
+"
+
+[node name="Menü_exit_settings" type="Button" parent="." unique_id=548671502]
+offset_left = 283.0
+offset_top = 15.0
+offset_right = 335.0
+offset_bottom = 61.0
+text = "XXX"
+
+[node name="FUNFACT" type="Label" parent="." unique_id=1124069172]
+self_modulate = Color(0.48127496, 0, 0, 1)
+offset_left = 61.0
+offset_top = 255.0
+offset_right = 307.0
+offset_bottom = 351.0
+text = "Hier könnte ihre Werbung 
+stehen ....... quak quak mofogga"
+autowrap_mode = 2
+
+[node name="TurnLabel" type="Label" parent="." unique_id=1536891431]
+self_modulate = Color(0, 0, 0, 1)
+offset_left = 53.0
+offset_top = 154.0
+offset_right = 305.0
+offset_bottom = 239.0
+
+[connection signal="pressed" from="W 1-3/W1" to="." method="_on_w_1_pressed"]
+[connection signal="pressed" from="W 1-3/W2" to="." method="_on_w_2_pressed"]
+[connection signal="pressed" from="W 1-3/W3" to="." method="_on_w_3_pressed"]
+[connection signal="pressed" from="W 4-6/W4" to="." method="_on_w_4_pressed"]
+[connection signal="pressed" from="W 4-6/W5" to="." method="_on_w_5_pressed"]
+[connection signal="pressed" from="W 4-6/W6" to="." method="_on_w_6_pressed"]
+[connection signal="pressed" from="Fold" to="." method="_on_fold_pressed"]
+[connection signal="pressed" from="Throw" to="." method="_on_throw_pressed"]
+[connection signal="pressed" from="Menü_exit_settings" to="." method="_on_menü_exit_settings_pressed"]

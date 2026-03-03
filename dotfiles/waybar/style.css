@@ -1,0 +1,103 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", "JetBrainsMono", sans-serif;
+    font-size: 14px;
+}
+
+window#waybar {
+    background-color: rgba(10, 10, 15, 0.4); 
+    
+    border-bottom: 2px solid #ff00ff; 
+
+    box-shadow: inset 0 0 10px rgba(255, 0, 255, 0.2);
+}
+
+
+/* Basis-Styling für alle Module */
+#cpu, #memory, #clock, #network, #bluetooth, #wireplumber, #mpris, #custom-mullvad, #window {
+    font-size: 16px; 
+    font-weight: 900;
+    padding: 0 12px;
+}
+
+/* --- CPU (Purple Glow) --- */
+#cpu { 
+    color: #bd00ff; 
+    text-shadow: 0 0 10px #bd00ff, 0 0 20px #ff00c8; 
+}
+
+/* --- MEMORY (Cyan Glow) --- */
+#memory { 
+    color: #00f0ff; 
+    text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff; 
+}
+
+/* --- CLOCK (Magenta Glow) --- */
+#clock { 
+    color: #ff00ff; 
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff; 
+}
+
+/* --- MULLVAD NEON STYLE --- */
+#custom-mullvad {
+    font-size: 20px; 
+    padding: 0 15px;
+}
+
+#custom-mullvad.connected {
+    color: #39FF14;
+    text-shadow: 0 0 10px #39FF14, 0 0 25px #a9ff14;
+}
+
+#custom-mullvad.disconnected {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff, 0 0 25px #ff00ff;
+}
+
+
+/* --- WIREPLUMBER (Orange Lichtschwert) --- */
+#wireplumber {
+    color: #FF5F1F; 
+    text-shadow: 0 0 10px #FF5F1F, 0 0 20px #FF5F1F, 0 0 30px #FF5F1F;
+}
+
+/* --- MIKROFON (Toxic Yellow Lichtschwert) --- */
+#wireplumber.microphone {
+    color: #FFF01F; 
+    text-shadow: 0 0 10px #FFF01F, 0 0 20px #FFF01F, 0 0 30px #FFF01F;
+}
+
+/* --- NETWORK (Turquoise Glow) --- */
+#network {
+    color: #08FFC8; 
+    text-shadow: 0 0 10px #08FFC8, 0 0 20px #08FFC8;
+}
+#network.disconnected {
+    color: #FF003C; 
+    text-shadow: 0 0 10px #FF003C, 0 0 20px #FF003C;
+}
+
+/* --- BLUETOOTH (Deep Purple / Electric Blue) --- */
+#bluetooth {
+    color: #bc13fe; 
+    text-shadow: 0 0 10px #BC13FE, 0 0 20px #BC13FE;
+}
+#bluetooth.connected {
+    color: #00F0FF; 
+    text-shadow: 0 0 10px #00F0FF, 0 0 25px #00F0FF;
+}
+
+#window {
+    font-size: 19px;          
+    font-weight: 900;
+    color: #ff0000;           
+    
+    text-shadow: 
+        -1px -1px 0 #000,     /* Rand oben links */
+         1px -1px 0 #000,     /* Rand oben rechts */
+        -1px  1px 0 #000,     /* Rand unten links */
+         1px  1px 0 #000,     /* Rand unten rechts */
+         0 0 15px #ff0000;    /* Das rote Scheppern nach außen */
+
+    padding: 0 20px;
+}
+

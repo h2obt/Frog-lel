@@ -1,0 +1,89 @@
+[{
+    "height": 40,
+    "spacing": 5,
+
+    "modules-left": ["hyprland/workspaces", "mpris", "wireplumber", "wireplumber#microphone", "custom/mullvad"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["cpu", "memory", "clock", "network", "bluetooth"],
+
+    "hyprland/workspaces": {
+        "format": "{name}",     
+        "on-click": "activate", 
+        "sort-by-number": true
+    },
+
+    "hyprland/window": {
+        "format": "{}",
+        "max-length": 40,
+        "separate-outputs": true
+    },
+
+    "mpris": {
+        "format": "{player_icon} {title}",
+        "format-paused": " {title}",
+        "player-icons": {
+            "default": "",
+            "spotify": "",
+            "firefox": ""
+        },
+        "max-length": 25,
+        "on-click": "playerctl play-pause"
+    },
+
+    "wireplumber": {
+        "format": "{icon} {volume}%",
+        "format-muted": "",
+        "format-icons": ["", "", ""], 
+        "on-click": "pavucontrol"
+    },
+    
+    "wireplumber#microphone": {
+        "format": " {volume}%",
+        "format-muted": "",
+        "node-type": "Audio/Source"
+    }, 
+
+    "custom/mullvad": {
+        "format": "{}",
+        "return-type": "json",
+        "exec": "/home/h2obt/.config/waybar/mullvad-status.sh",
+        "interval": 2,
+        "on-click": "mullvad connect",
+        "on-click-right": "mullvad disconnect",
+        "on-click-middle": "mullvad-vpn"
+    },
+
+
+
+    "cpu": {
+        "interval": 10,
+        "format": " {usage}%", 
+        "on-click": "notify-send \"CPU Info\" \"$(sensors | grep 'Package id 0' | awk '{print $4}')\"",
+        "tooltip": false
+    },
+
+    "memory": {
+        "interval": 30,
+        "format": " {}%", 
+        "on-click": "kitty --title btop-float htop"
+    },
+
+    "network": {
+        "format-wifi": " {essid}",
+        "format-ethernet": "   {ifname}",
+        "format-disconnected": "⚠ Offline",
+        "on-click": "nm-connection-editor"
+    },
+
+    "bluetooth": {
+        "format": " {status}",
+        "format-connected": " {device_alias}",
+        "on-click": "blueman-manager"
+    },
+
+    "clock": {
+        "format": " {:%H:%M}",
+        "format-alt": "   {:%d.%m.%Y}",
+        "tooltip-format": "<tt>{calendar}</tt>"
+    }
+}]
